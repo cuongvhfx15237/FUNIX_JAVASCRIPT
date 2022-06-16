@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+}  
+.modal-page{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+#search-key{
+    width: 80%;
+    height: 40px;
+    font-size: 1.2em;
+
+}
+#Search-button img{
+    width: 36px;
+    height: 36px;
+}
+
+form.form-inline{
+    display: flex;
+
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+form.form-inline div{
+    align-items: stretch;
+}
+
+.drop-down-list {
+    background-color: #00ff22;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* Thiết lập vị trí cho thẻ div với class dropdown*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Nội dung Dropdown */
+  .DropDownList {
+    /*Ẩn nội dụng các đường dẫn*/
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Thiết kế style cho các đường dẫn tronng Dropdown */
+  .DropDownList p {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .Show{
+    display:block;
+  }
+
+@media screen and (max-width:767px){
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0px 50px;
+} 
+/* modal */
+#myBtn {
+    width: 100%;
+}
+
+#more-than {
+    width: 100%;
+}
+
+#Container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px minmax(150px, auto);
+    min-height: 150px;
+    margin: 10px 0px;
+}
+.picture {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
+
+/*tablet screen*/
+@media screen and (min-width: 768px) and (max-width:1279px){
+    body{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 0px 50px;
+    } 
+    /* modal */
+    #myBtn {
+        width: 100%;
+        grid-column: 1/13;
+    }
+
+    #more-than {
+        width: 100%;
+        grid-column: 1/13;
+    }
+    
+    #News-Container{
+        grid-column: 1/13;
+    }
+    #Container{
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: repeat(12, 1fr);
+        height: 200px;
+        margin: 10px 0px;
+    }
+    .picture {
+        grid-column: 1/4;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #new-content{
+        grid-column: 4/13;
+    }
+}
+/* PC Sceen */
+@media screen and (min-width: 1279px){
+    body{
+        display: grid;
+        grid-template-areas: 
+        "HE HE"
+        ". ."
+        "FT FT";
+        margin: 0px 50px;
+    } 
+
+    /* modal */
+    #myBtn {
+        width: 100%;
+        grid-area: HE;
+    }
+
+    #more-than {
+        width: 100%;
+        grid-area: FT;
+    }
+    
+    #News-Container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        grid-template-rows: 500px;
+        grid-auto-flow: row;
+    }
+    #Container{
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 200px;
+        margin: 10px 0px;
+    }
+    .picture {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+/* loading icon*/
+#load-icon{
+    width: 10%;
+    height: 100%;
+    animation: loading-page 2s linear infinite;
+    margin: auto 0%;
+}
+#loading{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    padding: 0px;
+    border : 1px solid black;
+    grid-column: 1/3;
+}
+@keyframes loading-page {
+    0%{ transform: scaleX(1);
+        transform-origin: left;
+        background-color : rgb(208, 242, 255);}
+        25%{ transform: scaleX(2.5);
+            transform-origin: left;
+                background-color : rgb(148, 209, 148);}
+        50%{ transform: scaleX(5);
+            transform-origin: left;
+                    background-color : rgb(77, 170, 77);}
+                    75%{ transform: scaleX(7.5);
+                        transform-origin: left;
+                        background-color : rgb(35, 130, 35);}
+                        100%{ transform: scaleX(10);
+                            transform-origin: left;
+                            background-color : rgb(0, 114, 0);}
+    }
+.hidden{
+    display: none;
+}

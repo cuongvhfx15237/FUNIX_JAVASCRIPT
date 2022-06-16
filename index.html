@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- Css -->
+  <link rel="stylesheet" href="main.css">
+
+  <title>Document</title>
+
+  
+</head>
+
+<body>
+
+  <!-- modal -->
+  
+    <!-- Trigger the modal with a button -->
+    <button id="myBtn" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">MY NEWS
+      <img src="SearchIcon.jpg" alt="_search-icon" style="width: 25px; height: 25px" />
+    </button>
+    <div id="Modal" class="modal-page">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">Close</button>
+          <h4 class="modal-title">KEY WORDS</h4>
+        </div>
+        <form class="form-inline">
+          <div>
+          <input id="search-key" class="Search-Keyword" type="search" Placeholder="please in put here"
+            aria-label="search" />
+          <button id="Search-button" class="btn-Search" type="button">
+            <img src="SearchIcon.jpg" alt="_search-icon">
+          </button>
+        </div>
+        
+          <div id="Lang-List">
+            <p><u>Search Languages</u></p>
+            <input type="radio" id="Lang" name="Lang" value="ar" >
+            <label for="Arabic">Arabic</label>
+            <input type="radio" id="Lang" name="Lang" value="de" >
+            <label for="German">German</label>
+            <input type="radio" id="Lang" name="Lang" value="el" >
+            <label for="Greek">Greek</label>
+            <input type="radio" id="Lang" name="Lang" value="en" >
+            <label for="English">English</label>
+            <input type="radio" id="Lang" name="Lang" value="es" >
+            <label for="Spanish">Spanish</label>
+            <input type="radio" id="Lang" name="Lang" value="fr" >
+            <label for="Fench">Fench</label>
+            <input type="radio" id="Lang" name="Lang" value="it" >
+            <label for="Italian">Italian</label>
+            <input type="radio" id="Lang" name="Lang" value="ja" >
+            <label for="Japanese">Japanese</label>
+          </div>
+          <div id="Country-List">
+            <p><u>Search Country</u></p>
+            <input type="radio" id="Country" name="Country" value="au" >
+            <label for="Autralia">Autralia</label>
+            <input type="radio" id="Country" name="Country" value="ca" >
+            <label for="Canada">Canada</label>
+            <input type="radio" id="Country" name="Country" value="ch" >
+            <label for="SwitzerLand">SwitzerLand</label>
+            <input type="radio" id="Country" name="Country" value="cn" >
+            <label for="China">China</label>
+            <input type="radio" id="Country" name="Country" value="de" >
+            <label for="Germany">Germany</label>
+            <input type="radio" id="Country" name="Country" value="fr" >
+            <label for="France">France</label>
+            <input type="radio" id="Country" name="Country" value="it" >
+            <label for="Italy">Italy</label>
+            <input type="radio" id="Country" name="Country" value="jp" >
+            <label for="Japan">Japan</label>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div id="loading" class="hidden">
+        <div id="load-icon"></div>
+        </div>
+  <div id="News-Container">
+
+  </div>
+  <button id="more-than" type="button" class="btn btn-info btn-lg">Get More ...</button>
+  </div>
+
+
+
+
+  <script src="main.js"> </script>
+</body>
+
+</html>
